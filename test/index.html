@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Falls</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- TODO: Remove this tag -->
+    <meta name="robots" content="noindex">
+
+    <style>
+        body {
+            background: #262626;
+            color: #fff;
+            margin: 0 !important;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        h1, h2, h3 {
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            margin: 4% auto;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        img {
+            max-width: 100%;
+        }
+        header {
+            height: 620px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header video {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        header .logo {
+            margin: 56px auto 0 auto;
+            z-index: 1;
+            max-width: 576px;
+            width: 90%;
+        }
+        header .gradient {
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            opacity: 0.8;
+
+            background-image: -webkit-gradient(linear, 0% 0%, 100% 0%,color-stop(0, rgb(234, 123, 215)),color-stop(1, rgb(61, 84, 170)));
+            background-image: -ms-linear-gradient(left,rgb(234, 123, 215) 0%,rgb(61, 84, 170) 100%);
+            background-image: linear-gradient(to right,rgb(234, 123, 215) 0%,rgb(61, 84, 170) 100%);
+        }
+        .header-button {
+            color: #262626;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 16px 20px;
+            border-radius: 4px;
+            background: white;
+            font-size: 16px;
+            margin-top: 54px;
+        }
+        main {
+            padding: 100px 0;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        main .about {
+            justify-content: space-between;
+            margin-bottom: 100px;
+        }
+        main .about-image {
+        }
+        main .about-text {
+            text-align: left;
+            font-size: 20px;
+            letter-spacing: 0.4px;
+            line-height: 1.7;
+        }
+        main .about-text p {
+            margin: 2.2em 0;
+        }
+        main .social-links {
+            display: flex;
+            justify-content: center;
+        }
+        main .social-links a {
+            color: #000;
+            font-size: 29px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        main .social-links a + a {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <video autoplay muted loop>
+            <source src="videos/magicfalls-original.mp4" type="video/mp4">
+        </video>
+        <div class="gradient"></div>
+        <img class="logo" src="images/logo.png" alt="">
+        <a href="#" class="header-button">Watch the Trailer</a>
+    </header>
+    <main>
+        <section class="about">
+            <div class="about-image">
+                <img src="images/magic_falls_tv_show_riley_and_astrid.jpg" alt="Riley and Astrid">
+            </div>
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus praesentium autem dicta iste consequatur expedita aperiam id maxime deleniti asperiores aut minus veritatis, corporis dolores deserunt. Beatae neque, quisquam consectetur!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+        <h2>Follow Us</h2>
+        <section class="social-links">
+            <a href="https://www.facebook.com/MagicFallsTV/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/magicfallstv/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/MagicFallsTV" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCi6Al6paXmuijXzt6l2KxAA" target="_blank"><i class="fab fa-youtube"></i></a>
+        </section>
+    </main>
+</body>
+</html>
