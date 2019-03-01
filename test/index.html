@@ -34,9 +34,14 @@
             max-width: 100%;
         }
         header {
-            height: 1300px;
+            height: 820px;
             position: relative;
             overflow: hidden;
+        }
+        @media( min-width: 786px ) {
+            header {
+                height: 1300px;
+            }
         }
         header .gradient-horizontal {
             position: absolute;
@@ -88,7 +93,8 @@
         }
         main {
             text-align: center;
-            max-width: 800px;
+            max-width: calc(800px + 5%);
+            padding: 0 5%;
             margin: 0 auto;
             position: relative;
             bottom: 390px;
@@ -100,14 +106,18 @@
         }
         main .about-video {
             padding-top: 60px;
-            max-width: 90%;
             margin: auto;
         }
         main .about-text {
             text-align: left;
-            font-size: 20px;
+            font-size: 16px;
             letter-spacing: 0.4px;
             line-height: 1.7;
+        }
+        @media( min-width: 768px ) {
+            main .about-text {
+                font-size: 20px;
+            }
         }
         main .about-text p {
             margin: 2.2em auto;
