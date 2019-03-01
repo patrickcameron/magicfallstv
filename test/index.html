@@ -6,14 +6,15 @@
     <title>Magic Falls</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 
     <!-- TODO: Remove this tag -->
     <meta name="robots" content="noindex">
 
     <style>
         body {
-            background: #262626;
-            color: #fff;
+            background: #fff;
+            color: #262626;
             margin: 0 !important;
             font-family: 'Montserrat', sans-serif;
             font-style: normal;
@@ -33,57 +34,74 @@
             max-width: 100%;
         }
         header {
-            height: 620px;
+            height: 1300px;
+            position: relative;
+            overflow: hidden;
+        }
+        header .gradient-horizontal {
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            opacity: 0.9;
+            z-index: 1;
+            background-image: linear-gradient(to right,rgb(241, 75, 212) 0%,rgb(47, 88, 239) 100%);
+        }
+        header .gradient-vertical {
+            position: absolute;
+            top: 340px; bottom: 0; left: 0; right: 0;
+            z-index: 2;
+            background-image: linear-gradient(to bottom, transparent 0%, #fff 100%);
+        }
+        header video {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        header .inner-wrapper {
+            position: relative;
+            z-index: 2;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        header video {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
+            margin: 60px 0;
         }
         header .logo {
             margin: 56px auto 0 auto;
-            z-index: 1;
-            max-width: 576px;
+            max-width: 660px;
             width: 90%;
         }
-        header .gradient {
-            position: absolute;
-            top: 0; bottom: 0; left: 0; right: 0;
-            opacity: 0.8;
-
-            background-image: -webkit-gradient(linear, 0% 0%, 100% 0%,color-stop(0, rgb(234, 123, 215)),color-stop(1, rgb(61, 84, 170)));
-            background-image: -ms-linear-gradient(left,rgb(234, 123, 215) 0%,rgb(61, 84, 170) 100%);
-            background-image: linear-gradient(to right,rgb(234, 123, 215) 0%,rgb(61, 84, 170) 100%);
-        }
-        .header-button {
+        header .header-button {
             color: #262626;
-            z-index: 1;
             text-transform: uppercase;
             letter-spacing: 3px;
             padding: 16px 20px;
             border-radius: 4px;
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
             font-size: 16px;
             margin-top: 54px;
+            transition: 0.6s background;
+        }
+        header .header-button:hover,
+        header .header-button:focus {
+            background: rgba(255, 255, 255);
         }
         main {
-            padding: 100px 0;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            bottom: 390px;
+            z-index: 3;
         }
         main .about {
             justify-content: space-between;
             margin-bottom: 100px;
         }
-        main .about-image {
+        main .about-video {
+            padding-top: 60px;
+            max-width: 90%;
+            margin: auto;
         }
         main .about-text {
             text-align: left;
@@ -92,7 +110,8 @@
             line-height: 1.7;
         }
         main .about-text p {
-            margin: 2.2em 0;
+            margin: 2.2em auto;
+            max-width: 460px;
         }
         main .social-links {
             display: flex;
@@ -115,22 +134,31 @@
     </style>
 </head>
 <body>
+
     <header>
-        <video autoplay muted loop>
+        <video autoplay loop muted playsinline>
             <source src="video/magicfalls.mp4" type="video/mp4">
         </video>
-        <div class="gradient"></div>
-        <img class="logo" src="images/logo.png" alt="">
-        <a href="#" class="header-button">Watch the Trailer</a>
+        <span class="gradient-horizontal"></span>
+        <span class="gradient-vertical"></span>
+        <div class="inner-wrapper">
+            <img class="logo" src="images/logo.png" alt="">
+            <!-- <span class=""> -->
+                <a href="#trailer" class="sparkley header-button">Watch the Trailer</a>
+            <!-- </span> -->
+        </div>
     </header>
+
     <main>
         <section class="about">
-            <div class="about-image">
-                <img src="images/magic_falls_tv_show_riley_and_astrid.jpg" alt="Riley and Astrid">
+            <div class="about-video" id="trailer">
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/265045525?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                <!-- <img src="images/magic_falls_tv_show_riley_and_astrid.jpg" alt="Riley and Astrid"> -->
             </div>
             <div class="about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus praesentium autem dicta iste consequatur expedita aperiam id maxime deleniti asperiores aut minus veritatis, corporis dolores deserunt. Beatae neque, quisquam consectetur!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>In <em>Magic Falls</em>, magician duo Astrid and Riley, have moved to what they deem to be the epicentre of magic movers-and-shakers: Niagara Falls, Canada, in order to break into the magic scene. As women magicians, they are a small minority in a largely male-dominated field, and on a local scale their immediate adversaries are snarky twin male magicians Zeke and Zork.</p>
+                <p>By day, the women work as local tour guides, practicing their craft in front of generally indifferent audiences, and take magic gigs whenever they can. They are also haunted by their sordid past -- a magic trick gone awry that resulted in the permanent vanishing of the third member of their trio.</p>
+                <p>When they catch wind of an open-call audition for a residency on-stage at a local casino, the women become singularly determined to win out against the twins and use the opportunity to prove themselves in the magic community at large.</p>
             </div>
         </section>
         <h2>Follow Us</h2>
@@ -141,5 +169,10 @@
             <a href="https://www.youtube.com/channel/UCi6Al6paXmuijXzt6l2KxAA" target="_blank"><i class="fab fa-youtube"></i></a>
         </section>
     </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="scripts.js"></script>
+
 </body>
 </html>
