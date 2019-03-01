@@ -6,7 +6,7 @@
     <title>Magic Falls</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script> -->
 
     <!-- TODO: Remove this tag -->
     <meta name="robots" content="noindex">
@@ -113,11 +113,17 @@
             font-size: 16px;
             letter-spacing: 0.4px;
             line-height: 1.7;
+            margin-top: 100px;
         }
         @media( min-width: 768px ) {
             main .about-text {
                 font-size: 20px;
             }
+        }
+        main .about-text img {
+            display: block;
+            max-width: 500px;
+            margin: 100px auto;
         }
         main .about-text p {
             margin: 2.2em auto;
@@ -162,13 +168,14 @@
     <main>
         <section class="about">
             <div class="about-video" id="trailer">
-                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/265045525?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-                <!-- <img src="images/magic_falls_tv_show_riley_and_astrid.jpg" alt="Riley and Astrid"> -->
+                <style>
+                .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/qS4VExpZY4Y' frameborder='0' allowfullscreen></iframe></div>
             </div>
             <div class="about-text">
                 <p>In <em>Magic Falls</em>, magician duo Astrid and Riley, have moved to what they deem to be the epicentre of magic movers-and-shakers: Niagara Falls, Canada, in order to break into the magic scene. As women magicians, they are a small minority in a largely male-dominated field, and on a local scale their immediate adversaries are snarky twin male magicians Zeke and Zork.</p>
                 <p>By day, the women work as local tour guides, practicing their craft in front of generally indifferent audiences, and take magic gigs whenever they can. They are also haunted by their sordid past -- a magic trick gone awry that resulted in the permanent vanishing of the third member of their trio.</p>
                 <p>When they catch wind of an open-call audition for a residency on-stage at a local casino, the women become singularly determined to win out against the twins and use the opportunity to prove themselves in the magic community at large.</p>
+                <img src="images/magic_falls_tv_show_riley_and_astrid.jpg" alt="Riley and Astrid">
             </div>
         </section>
         <h2>Follow Us</h2>
