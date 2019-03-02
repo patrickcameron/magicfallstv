@@ -10,8 +10,8 @@ $(function() {
   // default is varying levels of transparent white sparkles
   $(".sparkley").sparkleh({
       color: ['#e700ff', '#5f38ff'],
-      count: 68,
-      overlap: 44
+      count: 38,
+      overlap: 26,
   });
 
 });
