@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Magic Falls</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Meta Tags -->
-    <title>Magic Falls</title>
     <meta name="title" content="Magic Falls">
     <meta name="description" content="In Magic Falls, magician duo Astrid and Riley, have moved to what they deem to be the epicentre of magic movers-and-shakers: Niagara Falls, Canada, in order to break into the magic scene. As women magicians, they are a small minority in a largely male-dominated field, and on a local scale their immediate adversaries are snarky twin male magicians Zeke and Zork.">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://magicfallstv.com/">
     <meta property="og:title" content="Magic Falls">
@@ -48,6 +47,15 @@
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
+        }
+        @media ( min-width: 768px ) {
+            body {
+                font-size: 20px;
+            }
+        }
+        body *::selection {
+            background: rgb(244, 0, 202);
+            color: #fff;
         }
         h1, h2, h3 {
             letter-spacing: 0.5em;
@@ -111,9 +119,14 @@
             padding: 16px 20px;
             border-radius: 4px;
             background: rgba(255, 255, 255, 0.8);
-            font-size: 16px;
+            font-size: 14px;
             margin-top: 54px;
             transition: 0.6s background;
+        }
+        @media( min-width: 768px ) {
+            header .header-button {
+                font-size: 16px;
+            }
         }
         header .header-button:hover,
         header .header-button:focus {
@@ -138,15 +151,9 @@
         }
         main .about-text {
             text-align: left;
-            font-size: 16px;
             letter-spacing: 0.4px;
             line-height: 1.7;
             margin-top: 100px;
-        }
-        @media( min-width: 768px ) {
-            main .about-text {
-                font-size: 20px;
-            }
         }
         main .about-text img {
             display: block;
@@ -181,7 +188,7 @@
 
     <header>
         <video autoplay loop muted playsinline>
-            <source src="video/magicfalls.mp4" type="video/mp4">
+            <source src="video/magicfalls.mp4#t=0" type="video/mp4">
         </video>
         <span class="gradient-horizontal"></span>
         <span class="gradient-vertical"></span>
