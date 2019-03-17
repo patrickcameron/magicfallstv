@@ -70,14 +70,11 @@
             max-width: 100%;
         }
         header {
-            height: 820px;
+            height: 100vh;
+            min-height: 568px;
             position: relative;
             overflow: hidden;
-        }
-        @media( min-width: 786px ) {
-            header {
-                height: 1300px;
-            }
+            display: flex;
         }
         header .gradient-horizontal {
             position: absolute;
@@ -105,10 +102,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 60px 0;
+            padding: 60px 0;
+            margin: auto;
         }
         header .logo {
-            margin: 56px auto 0 auto;
+            margin: 0 auto;
             max-width: 660px;
             width: 90%;
         }
@@ -136,9 +134,7 @@
             text-align: center;
             max-width: calc(800px + 5%);
             padding: 0 5%;
-            margin: 0 auto;
-            position: relative;
-            bottom: 390px;
+            margin: 0 auto 5% auto;
             z-index: 3;
         }
         main .about {
@@ -153,7 +149,7 @@
             text-align: left;
             letter-spacing: 0.4px;
             line-height: 1.7;
-            margin-top: 100px;
+            margin-top: 10%;
         }
         main .about-text img {
             display: block;
